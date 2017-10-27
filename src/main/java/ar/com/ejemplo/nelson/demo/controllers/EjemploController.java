@@ -48,7 +48,7 @@ public class EjemploController {
 		try{
 			return ResponseEntity.status(HttpStatus.OK).body(usuarioRepo.findById(id));
 		}catch(Exception e){
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error Macri Gato!");
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error");
 		}
 	}
 
@@ -60,7 +60,7 @@ public class EjemploController {
 			
 			return ResponseEntity.status(HttpStatus.OK).body(usuario);
 		}catch(Exception e){
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error Macri Gato!");
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error!");
 		}
 	}
 
@@ -70,7 +70,7 @@ public class EjemploController {
 			usuarioRepo.delete(usuario);
 			return ResponseEntity.ok().build();
 		}catch(Exception e){
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error Macri Gato!");
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error!");
 		}
 	}
 
